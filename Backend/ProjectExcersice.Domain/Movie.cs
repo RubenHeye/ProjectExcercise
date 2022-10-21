@@ -23,8 +23,8 @@ namespace ProjectExcersice.Domain
         public string? Description { get; set; }
         [JsonPropertyName("certification")]
         public string? Certification { get; set; }
-        //[JsonPropertyName("cast")]
-        //public ICollection<Actor> Actors { get; set; } = new List<Actor>();
+        [JsonPropertyName("cast")]
+        public ICollection<Actor> Actors { get; set; } = new List<Actor>();
         [JsonPropertyName("poster_path")]
         public string? Picture { get; set; }
         [JsonPropertyName("release_date")]

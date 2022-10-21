@@ -23,33 +23,34 @@ namespace ProjectExcercise.Infrastructure.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            using (StreamReader r = new StreamReader("C:\\Users\\RHECM51\\source\\Projects\\Project Excercise\\ProjectExcercise\\ProjectExcercise.Infrastructure\\data.json"))
+            using (StreamReader r = new StreamReader("C:\\Users\\RHECM51\\source\\Projects\\Project Excercise\\ProjectExcercise\\Backend\\ProjectExcercise.Infrastructure\\data.json"))
             {
                 string json = r.ReadToEnd();
                 List<Movie> movies = JsonSerializer.Deserialize<List<Movie>>(json)!;
-                
-                /*
+                var tmpActors = JsonSerializer.Deserialize<List<Actor>>(json)!;
+                List<KeyValuePair<int, int>> movieActor = new List<KeyValuePair<int, int>>();
+
+
+
                 List<Actor> actors = new List<Actor>();
-                foreach(var movie in movies)
+                foreach (var movie in movies)
                 {
-                    foreach(Actor actor in movie.Actors)
+                    foreach (Actor actor in movie.Actors)
                     {
-                        if (actors.Contains(actor))
+                        movieActor.Add(new KeyValuePair<int, int>(movie.Id, actor.Id));
+                        if (!actors.Select(x => x.Id).Contains(actor.Id))
                         {
                             actors.Add(actor);
                         }
                     }
+                    movie.Actors = new List<Actor>();
                 }
-
-                modelBuilder.SharedTypeEntity<Dictionary<string, object>>("MovieActor", builder =>
-                {
-                    builder.Property<int>("MovieId");
-                    builder.Property<int>("ActorId");
-                    builder.HasKey("MovieId", "ActorId");
-
-                });
-
-
+                modelBuilder
+                    .Entity<Actor>()
+                    .HasData(actors);
+                modelBuilder
+                    .Entity<Movie>()
+                    .HasData(movies);
                 modelBuilder
                     .Entity<Movie>()
                     .HasMany(x => x.Actors)
@@ -57,17 +58,12 @@ namespace ProjectExcercise.Infrastructure.Persistence
                     .UsingEntity<Dictionary<string, object>>("ActorMovie",
                        x => x.HasOne<Actor>().WithMany().HasForeignKey("ActorId"),
                        x => x.HasOne<Movie>().WithMany().HasForeignKey("MovieId"),
-                       x => x.ToTable("ActorMovie"))
-                    .HasData();
-
-
-                modelBuilder
-                    .Entity<Actor>()
-                    .HasData(actors);
-                */
-                modelBuilder
-                    .Entity<Movie>()
-                    .HasData(movies);
+                       x =>
+                       {
+                           x.HasKey("MovieId", "ActorId");
+                           foreach (var item in movieActor)
+                               x.HasData(new { MovieId = item.Key, ActorId = item.Value });
+                       });
             }
 
 
