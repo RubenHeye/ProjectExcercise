@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using ProjectExcercise.Application.Common.Interfaces;
 using ProjectExcercise.Application.Common.Movies.Dtos;
+using ProjectExcercise.Application.Common.Movies.Queries;
 using System.Net;
 
 namespace ProjectExcercise.Api.Controllers
@@ -9,18 +11,19 @@ namespace ProjectExcercise.Api.Controllers
     [ApiController]
     public class MovieController : ControllerBase
     {
-        private readonly IMovieService _movieService;
+        private readonly IMediator _mediator;
 
-        public MovieController(IMovieService movieService)
+        public MovieController(IMediator mediator)
         {
-            _movieService = movieService;
+            _mediator = mediator;
         }
 
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(MovieDto[]))]
         public async Task<ActionResult> GetAllMovies()
         {
-            return Ok();
+            var movies = await _mediator.Send(new GetMoviesQuery { }, default);
+            return Ok(movies);
         }
     }
 }

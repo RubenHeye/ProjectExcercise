@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectExcercise.Infrastructure.Persistence
 {
-    public class MovieDbContext : DbContext
+    public class MovieDbContext : DbContext, IMovieDbContext
     {
         public DbSet<Movie> Movies => Set<Movie>();
         public DbSet<Actor> Actors => Set<Actor>();
