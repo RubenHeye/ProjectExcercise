@@ -1,0 +1,12 @@
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\bin\Debug\net6.0\ProjectExcersice.Domain.deps.json
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\bin\Debug\net6.0\ProjectExcersice.Domain.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\bin\Debug\net6.0\ProjectExcersice.Domain.pdb
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.csproj.AssemblyReference.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.AssemblyInfoInputs.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.AssemblyInfo.cs
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\refint\ProjectExcersice.Domain.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ProjectExcersice.Domain.pdb
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcersice.Domain\obj\Debug\net6.0\ref\ProjectExcersice.Domain.dll

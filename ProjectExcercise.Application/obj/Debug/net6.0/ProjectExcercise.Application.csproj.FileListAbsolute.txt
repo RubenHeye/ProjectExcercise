@@ -1,0 +1,15 @@
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\bin\Debug\net6.0\ProjectExcercise.Application.deps.json
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\bin\Debug\net6.0\ProjectExcercise.Application.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\bin\Debug\net6.0\ProjectExcercise.Application.pdb
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\bin\Debug\net6.0\ProjectExcersice.Domain.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\bin\Debug\net6.0\ProjectExcersice.Domain.pdb
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.csproj.AssemblyReference.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.AssemblyInfoInputs.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.AssemblyInfo.cs
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.csproj.CoreCompileInputs.cache
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.csproj.CopyComplete
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\refint\ProjectExcercise.Application.dll
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ProjectExcercise.Application.pdb
+C:\Users\DDPCN29\Documents\acADDemITCs\ProjectExercice\repos\ProjectExcercise\ProjectExcercise.Application\obj\Debug\net6.0\ref\ProjectExcercise.Application.dll

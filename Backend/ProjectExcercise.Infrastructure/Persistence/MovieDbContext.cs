@@ -4,6 +4,7 @@ using ProjectExcersice.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -22,8 +23,14 @@ namespace ProjectExcercise.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //SeedingData(modelBuilder);
+            base.OnModelCreating(modelBuilder);
+        }
 
-            using (StreamReader r = new StreamReader("C:\\Users\\RHECM51\\source\\Projects\\Project Excercise\\ProjectExcercise\\Backend\\ProjectExcercise.Infrastructure\\data.json"))
+
+        private void SeedingData(ModelBuilder modelBuilder)
+        {
+            using (StreamReader r = new StreamReader("C:\\Users\\DDPCN29\\Documents\\acADDemITCs\\ProjectExercice\\repos\\ProjectExcercise\\Backend\\ProjectExcercise.Infrastructure\\data.json"))
             {
                 string json = r.ReadToEnd();
                 List<Movie> movies = JsonSerializer.Deserialize<List<Movie>>(json)!;
@@ -35,7 +42,7 @@ namespace ProjectExcercise.Infrastructure.Persistence
                 List<Actor> actors = new List<Actor>();
                 foreach (var movie in movies)
                 {
-                    foreach (Actor actor in movie.Actors)
+                    foreach (Actor actor in movie.Actor)
                     {
                         movieActor.Add(new KeyValuePair<int, int>(movie.Id, actor.Id));
                         if (!actors.Select(x => x.Id).Contains(actor.Id))
@@ -43,7 +50,7 @@ namespace ProjectExcercise.Infrastructure.Persistence
                             actors.Add(actor);
                         }
                     }
-                    movie.Actors = new List<Actor>();
+                    movie.Actor = new List<Actor>();
                 }
                 modelBuilder
                     .Entity<Actor>()
@@ -53,22 +60,18 @@ namespace ProjectExcercise.Infrastructure.Persistence
                     .HasData(movies);
                 modelBuilder
                     .Entity<Movie>()
-                    .HasMany(x => x.Actors)
-                    .WithMany(x => x.Movies)
+                    .HasMany(x => x.Actor)
+                    .WithMany(x => x.Movie)
                     .UsingEntity<Dictionary<string, object>>("ActorMovie",
-                       x => x.HasOne<Actor>().WithMany().HasForeignKey("ActorId"),
-                       x => x.HasOne<Movie>().WithMany().HasForeignKey("MovieId"),
+                       x => x.HasOne<Actor>().WithMany().HasForeignKey("ActorsId"),
+                       x => x.HasOne<Movie>().WithMany().HasForeignKey("MoviesId"),
                        x =>
                        {
-                           x.HasKey("MovieId", "ActorId");
+                           x.HasKey("MoviesId", "ActorsId");
                            foreach (var item in movieActor)
                                x.HasData(new { MovieId = item.Key, ActorId = item.Value });
                        });
             }
-
-
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }

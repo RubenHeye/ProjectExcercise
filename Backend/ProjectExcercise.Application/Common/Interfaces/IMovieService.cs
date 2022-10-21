@@ -10,5 +10,6 @@ namespace ProjectExcercise.Application.Common.Interfaces
     public interface IMovieService
     {
         Task<MovieDto[]> GetMoviesAsync();
+        Task<MovieDetailsDto> GetMovieDetailsAsync(int id);
     }
 }
