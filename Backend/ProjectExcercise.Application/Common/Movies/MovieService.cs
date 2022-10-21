@@ -28,7 +28,6 @@ namespace ProjectExcercise.Application.Common.Movies
                     ReleaseDate = t.ReleaseDate,
                     PictureUri = t.Picture,
                 })
-                .Take(100)
                 .ToArrayAsync();
         }
     }
