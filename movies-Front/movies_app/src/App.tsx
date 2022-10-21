@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/nav/Nav';
+import { Route, Routes } from 'react-router';
+import List from './components/movies/List';
+import NotFound from './views/NotFound';
+import MovieDetails from './views/MovieDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<List />}></Route>
+          <Route path='/:id' element={<MovieDetails />}></Route>
+          <Route path='*' element={<NotFound/>}></Route>
+        </Routes>
+    </React.Fragment>
   );
 }
 
