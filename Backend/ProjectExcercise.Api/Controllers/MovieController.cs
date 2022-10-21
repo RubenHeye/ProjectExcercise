@@ -25,5 +25,13 @@ namespace ProjectExcercise.Api.Controllers
             var movies = await _mediator.Send(new GetMoviesQuery { }, default);
             return Ok(movies);
         }
+
+        [HttpGet("/actor/{id}")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(MovieDto[]))]
+        public async Task<ActionResult> GetAllMoviesByActor(int id)
+        {
+            var movies = await _mediator.Send(new GetMoviesByActorQuery { Id = id}, default);
+            return Ok(movies);
+        }
     }
 }
