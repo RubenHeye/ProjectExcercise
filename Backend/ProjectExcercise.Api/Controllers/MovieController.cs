@@ -22,8 +22,16 @@ namespace ProjectExcercise.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(MovieDto[]))]
         public async Task<ActionResult> GetAllMovies()
         {
-            var movies = await _mediator.Send(new GetMoviesQuery { }, default);
+            var movies = await _mediator.Send(new GetMoviesQuery());
             return Ok(movies);
+        }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(MovieDetailsDto))]
+        public async Task<ActionResult> GetMovieDetails(int id)
+        {
+            var movie = await _mediator.Send(new GetMovieDetailsQuery { Id = id });
+            return Ok(movie);
         }
     }
 }

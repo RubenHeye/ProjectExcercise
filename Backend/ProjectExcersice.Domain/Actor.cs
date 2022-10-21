@@ -13,6 +13,6 @@ namespace ProjectExcersice.Domain
         public int Id { get; set; }
         [JsonPropertyName("name")]
         public string Name { get; set; }
-        public ICollection<Movie> Movies { get; set; } = new List<Movie>();
+        public ICollection<Movie> Movie { get; set; } = new List<Movie>();
     }
 }
