@@ -15,9 +15,9 @@ namespace ProjectExcercise.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddDbContext<MovieDbContext>(options =>
-                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Movies;Trusted_Connection=True;MultipleActiveResultSets=true"));
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ProjectExcercise;Trusted_Connection=True;MultipleActiveResultSets=true"));
 
-            services.AddScoped<IMovieDbContext>(collection => collection.GetRequiredService<MovieDbContext>());
+            //services.AddScoped<IMovieDbContext>(collection => collection.GetRequiredService<MovieDbContext>());
 
             return services;
         }
